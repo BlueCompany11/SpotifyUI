@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:core="clr-namespace:SpotifyUI.MenuBar.Controls">
+    <Style x:Name="MenuControlStyle" TargetType="core:MenuControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="core:MenuControl">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <core:MenuItemControl Grid.Row="0"
+                                              Title="Home"
+                                              Style="{StaticResource MenuItemControlStyle}"></core:MenuItemControl>
+                        <core:MenuItemControl Grid.Row="1"
+                                              Title="Search"
+                                              Style="{StaticResource MenuItemControlStyle}"></core:MenuItemControl>
+                        <core:MenuItemControl Grid.Row="2"
+                                              Title="Your Library"
+                                              Style="{StaticResource MenuItemControlStyle}"></core:MenuItemControl>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

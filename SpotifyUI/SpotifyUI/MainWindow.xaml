@@ -5,16 +5,22 @@
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:local="clr-namespace:SpotifyUI"
+                 xmlns:controls="clr-namespace:SpotifyUI.MenuBar.Controls"
                  ShowTitleBar="False"
                  mc:Ignorable="d"
                  Height="450"
                  Width="800"
                  WindowState="Maximized">
+    <mah:MetroWindow.Resources>
+        <ResourceDictionary Source="\MenuBar\Styles\Resources.xaml"></ResourceDictionary>
+    </mah:MetroWindow.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="240"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="240"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <controls:MenuControl Grid.Row="0"
+                              Style="{StaticResource MenuControlStyle}"></controls:MenuControl>
     </Grid>
 </mah:MetroWindow>
